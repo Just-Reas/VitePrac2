@@ -1,0 +1,36 @@
+@use '../mixins/mixins.scss' as *;
+
+#header{
+    background-color: black;
+}
+
+.header__inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 30px;
+    .logo{
+        display: flex;
+        align-items: center;
+        height: 57px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        gap: 64px;
+        color: white;
+
+        &__item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include saira-regular;
+        }
+    }  
+}

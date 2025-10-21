@@ -1,0 +1,35 @@
+@use '../mixins/mixins.scss' as *;
+
+
+#home{
+    //background-image: url(../png/home__wallpaper.png);
+    //background-repeat: no-repeat;
+    //background-size: cover;
+}
+
+.home__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    .inner__textblock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .inner__board{
+
+        &__menu{
+            display: flex;
+            align-items: center;
+            gap: 190px;
+
+            &__list{
+                
+            }
+        }
+    }
+}

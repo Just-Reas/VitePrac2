@@ -1,0 +1,167 @@
+@use './normalize.css';
+@use './header.scss';
+@use './home.scss';
+
+:root {
+    font-family: 'Saira', sans-serif;
+}
+
+*{
+    font-size: 16px;
+}
+
+.container{
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+$font-size: 16px;
+
+$black_color: #23262F;
+$white-color: #FFFFFF;
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraBoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ExtraLightItalic.woff2') format('woff2');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saira';
+    src: url('../fonts/Saira-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+
