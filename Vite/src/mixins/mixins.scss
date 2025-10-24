@@ -1,5 +1,81 @@
+
 @mixin saira-regular{
     font-family: 'Saira', sans-serif;
     font-weight: normal;
     font-size: 1rem;
+}
+
+@mixin saira-regular2{
+    font-family: 'Saira', sans-serif;
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+@mixin saira-semi-bold{
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+@mixin saira-semi-bold2{
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+@mixin saira-semi-bold3{
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+@mixin saira-semi-bold4{
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+@mixin flex-align($display: flex, $align: center){
+    display: $display;
+    align-items: $align;
+}
+
+@mixin flex-center($display: flex, $justify: center, $align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-space($display: flex, $justify: space-between, $align: center) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-space-short($display: flex, $justify: space-between) {
+  display: $display;
+  justify-content: $justify;
+}
+
+@mixin flex-column($display: flex, $flex: column, $align: center) {
+  display: $display;
+  flex-direction: $flex;
+  align-items: $align;
+}
+
+@mixin flex-column-short($display: flex, $flex: column) {
+  display: $display;
+  flex-direction: $flex;
+}
+
+@mixin flex-column-justify($display: flex, $flex: column, $justify: center) {
+  display: $display;
+  flex-direction: $flex;
+  justify-content: $justify;
+}
+
+@mixin flex-column-between($display: flex, $flex: column, $justify: space-between) {
+  display: $display;
+  flex-direction: $flex;
+  justify-content: $justify;
 }

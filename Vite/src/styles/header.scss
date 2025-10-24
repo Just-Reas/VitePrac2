@@ -1,36 +1,56 @@
 @use '../mixins/mixins.scss' as *;
+@use '../styles/variables.scss' as *;
+
 
 #header{
-    background-color: black;
+    background: #000000;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(5px);
 }
 
-.header__inner{
+.header{
+    
+    position: fixed;
+    z-index: 1000;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    left: 0;
+    top: 0;
+
+    &__inner{
+    width: 100%;
     padding: 23px 30px;
-    .logo{
-        display: flex;
-        align-items: center;
-        height: 57px;
-        img{
-            width: 100%;
-            height: auto;
-        }
+
+    @include flex-space;
     }
-    .menu{
-        display: flex;
-        align-items: center;
+
+    &__logo{
+        height: 57px;
+
+        @include flex-center;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    }
+
+    &__menu{
         gap: 64px;
-        color: white;
+        color: $white_color;
+        
+        @include flex-center;
+    }
 
-        &__item{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    &__item{
+        color: $white_color;
+        text-decoration: none;
 
-            @include saira-regular;
-        }
-    }  
+        @include flex-center;
+        @include saira-regular;
+    }
+
 }
+
+.header.hide {
+  transform: translateY(-100%);
+}
+

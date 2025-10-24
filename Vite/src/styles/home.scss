@@ -1,34 +1,125 @@
 @use '../mixins/mixins.scss' as *;
+@use '../styles/variables.scss' as *;
 
 
-#home{
-    //background-image: url(../png/home__wallpaper.png);
-    //background-repeat: no-repeat;
-    //background-size: cover;
-}
-
-.home__inner{
+.home{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    z-index: 1;
+    min-height: 1000px;
+    background-image: url(../png/home__wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    width: 100%;
-    .inner__textblock{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    padding-top: 103px;
+    &__inner{
+        justify-content: end;
+        height: 100%;
+        width: 100%;
 
+        padding-bottom: 30px;
+
+        @include flex-column;
     }
 
-    .inner__board{
+    width: 100%;
+    &__textblock{
+        @include flex-column;
+        &-first{
+            @include saira-semi-bold;
 
-        &__menu{
+            color: $white_color;
+
+            max-width: 888px;
+            text-align: center
+        }
+        &-second{
+            @include saira-regular2;
+
+            color: $white_color;
+
+            margin-top: 30px;
+            max-width: 627px;
+            text-align: center;
+        }
+        &-button{
             display: flex;
-            align-items: center;
-            gap: 190px;
+            @include saira-semi-bold2;
+            padding: 16px 80px;
+            gap: 10px;
+            border: 2px solid rgba(226, 226, 226, 0.4);
+            background: rgba(226, 226, 226, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            color: $white_color;
 
-            &__list{
-                
+            margin-top: 62px;
+            margin-bottom: 197px;
+
+            &:hover{
+                color: rgba(226, 226, 226, 0.4);
+            }
+
+            &:active{
+                color: $black_color;
+                border: 2px solid $gray_color;
+            }
+        }
+    }
+
+    &__board{
+        display: flex;
+        background-color: $green_color;
+        border-radius: 20px;
+        &-menu{
+            width: 100%;
+            max-width: 1240px;
+
+            padding-top: 38px;
+            padding-bottom: 37px;
+            padding-left: 111px;
+            padding-right: 111px;
+
+            @include flex-center;
+            &-item{
+                position: relative;
+                text-align: center;
+                gap: 5px;
+
+                color: $white_color;
+
+                @include flex-column-short;
+
+                &:not(:last-child){
+                    border-right: 2px solid $white_color;
+                    height: 100px;
+
+                    @include flex-column-justify;
+                }
+
+                &:nth-child(1){
+                    padding-right: 95px;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3){
+                    padding-left: 95px;
+                    padding-right: 95px;
+                }
+
+                &:nth-child(4){
+                    padding-left: 95px;
+                }
+
+                &-number{
+                    max-width: 112px;
+                    max-height: 48px;
+                    @include saira-semi-bold3;
+                }
+                &-description{
+                    max-width: 112px;
+                    max-height: 52px;
+                    @include saira-regular2;
+                }
             }
         }
     }

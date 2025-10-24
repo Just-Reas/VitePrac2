@@ -1,24 +1,14 @@
-@use './normalize.css';
+@use '../mixins/mixins.scss' as *;
+@use '../styles/variables.scss' as *;
+
 @use './header.scss';
 @use './home.scss';
-
-:root {
-    font-family: 'Saira', sans-serif;
-}
-
-*{
-    font-size: 16px;
-}
+@use './about.scss';
 
 .container{
     max-width: 1240px;
     margin: 0 auto;
 }
-
-$font-size: 16px;
-
-$black_color: #23262F;
-$white-color: #FFFFFF;
 
 @font-face {
     font-family: 'Saira';
