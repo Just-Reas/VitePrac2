@@ -1,0 +1,151 @@
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
+
+
+.home{
+    display: flex;
+    z-index: 1;
+    max-width: 100%;
+    min-height: 62.5rem;
+    background-image: url('../../png/home__wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center; // Добавляем центрирование 
+
+    padding-top: 6.4375rem;
+    &__inner{
+        justify-content: end;
+        height: 100%;
+        width: 100%;
+
+        padding-bottom: 1.875rem;
+
+        @include flex-column;
+    }
+
+    width: 100%;
+    &__textblock{
+        @include flex-column;
+        &-first{
+            @include saira-font(600, 4rem);
+
+            color: $white_color;
+
+            max-width: 55.5rem;
+            text-align: center
+        }
+        &-second{
+            @include saira-font(normal, 1.25rem);
+
+            color: $white_color;
+
+            margin-top: 1.875rem;
+            max-width: 39.1875rem;
+            text-align: center;
+        }
+        &-button{
+            display: flex;
+            @include saira-font(600, 1.25rem);
+            padding: 1rem 5rem;
+            gap: .625rem;
+            border: .125rem solid rgba(226, 226, 226, 0.4);
+            background: rgba(226, 226, 226, 0.4);
+            backdrop-filter: blur(15px);
+            border-radius: .625rem;
+            color: $white_color;
+
+            margin-top: 3.875rem;
+            margin-bottom: 12.3125rem;
+
+            &:hover{
+                color: rgba(226, 226, 226, 0.4);
+            }
+
+            &:active{
+                color: $black_color;
+                border: .125rem solid $gray_color;
+            }
+        }
+    }
+
+    &__board{
+        display: flex;
+        background-color: $green_color;
+        border-radius: 1.25rem;
+        &-menu{
+            width: 100%;
+            max-width: 77.5rem;
+
+            padding-top: 2.375rem;
+            padding-bottom: 2.3125rem;
+            padding-left: 6.9375rem;
+            padding-right: 6.9375rem;
+
+            @media screen and (max-width: 1200px){
+                padding-top: 2.375rem;
+                padding-bottom: 2.3125rem;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            @include flex-center;
+            &-item{
+                position: relative;
+                text-align: center;
+                gap: .3125rem;
+
+                color: $white_color;
+
+                @include flex-column-short;
+
+                &:not(:last-child){
+                    border-right: .125rem solid $white_color;
+                    height: 6.25rem;
+
+                    @include flex-column-justify;
+                }
+
+                &:nth-child(1){
+                    padding-right: 5.9375rem;
+
+                    @media screen and (max-width: 1400px){
+                        padding-right: 4.375rem;
+                    }
+                }
+
+                &:nth-child(2),
+                &:nth-child(3){
+                    padding-left: 5.9375rem;
+                    padding-right: 5.9375rem;
+                    @media screen and (max-width: 1400px){
+                        padding-right: 4.375rem;
+                        padding-left: 4.375rem;
+                    }
+                }
+
+                &:nth-child(4){
+                    padding-left: 5.9375rem;
+                    @media screen and (max-width: 1400px){
+                        padding-left: 4.375rem;
+                    }
+                }
+
+                &-number{
+                    max-width: 7rem;
+                    max-height: 3rem;
+                    @include saira-font(600, 2.5rem);
+                    @media screen and (max-width: 1200px){
+                        font-size: 2rem;
+                    }
+                }
+                &-description{
+                    max-width: 7rem;
+                    max-height: 3.25rem;
+                    @include saira-font(normal, 1.25rem);
+                    @media screen and (max-width: 1200px){
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

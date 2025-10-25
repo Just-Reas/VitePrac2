@@ -1,5 +1,5 @@
-@use '../mixins/mixins.scss' as *;
-@use '../styles/variables.scss' as *;
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
 
 
 #header{
@@ -8,8 +8,7 @@
     backdrop-filter: blur(5px);
 }
 
-.header{
-    
+.header{   
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -18,13 +17,13 @@
 
     &__inner{
     width: 100%;
-    padding: 23px 30px;
+    padding: 1.4375rem 1.875rem;
 
     @include flex-space;
     }
 
     &__logo{
-        height: 57px;
+        height: 3.5625rem;
 
         @include flex-center;
     img{
@@ -34,7 +33,7 @@
     }
 
     &__menu{
-        gap: 64px;
+        gap: 4rem;
         color: $white_color;
         
         @include flex-center;
@@ -45,7 +44,7 @@
         text-decoration: none;
 
         @include flex-center;
-        @include saira-regular;
+        @include saira-font(normal, 1rem);
     }
 
 }
